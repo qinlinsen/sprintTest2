@@ -1,7 +1,12 @@
 package com.timo.springcore;
 
+import org.apache.commons.lang3.ObjectUtils;
 import org.junit.Test;
+import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
+import org.springframework.web.util.WebUtils;
+
+import java.util.*;
 
 /**
  * @author qinlinsen
@@ -19,4 +24,19 @@ public class StringUtilsTest {
 			System.out.println(str);
 		}
 	}
+	@Test
+	public void test2(){
+	/*	ArrayList<Integer> list = new ArrayList<>();
+		for(int i=0;i<6;i++){
+			list.add(i);
+		}
+		String str = org.apache.commons.lang3.StringUtils.join(list, "#");
+		System.out.println(str);*/
+		Integer min = ObjectUtils.min(1, 2, 3);
+		Integer max = ObjectUtils.max(1, 2, 3);
+		System.out.println(max
+		);
+		System.out.println(min);
+	}
 }
+
